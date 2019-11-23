@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ASAPAssistance</string>
+
+    <!--Login activity-->  
+    <string name="usernameHint">Enter username here</string>
+    <string name="passwordHint">Enter password here</string>
+    <string name="forgot">Forget?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="desc">Please login to continue</string>
+
 </resources>

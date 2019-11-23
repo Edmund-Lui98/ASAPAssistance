@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "957070055765",
+    "firebase_url": "https://asapassistance-7ccb6.firebaseio.com",
+    "project_id": "asapassistance-7ccb6",
+    "storage_bucket": "asapassistance-7ccb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957070055765:android:5d9235e8701d72555e77dc",
+        "android_client_info": {
+          "package_name": "com.example.asapassistance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957070055765-drc3bthc9b88spbeibp9b1nkhkslovjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.asapassistance",
+            "certificate_hash": "203adc08ff70a9a88d17cbcfdbd41f46425f2998"
+          }
+        },
+        {
+          "client_id": "957070055765-iunpovcfuugmv1q6ge9liclm1u3n81fb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZMuTlIBU1N-86E85SGV5t-q4iU6h-0So"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957070055765-iunpovcfuugmv1q6ge9liclm1u3n81fb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
