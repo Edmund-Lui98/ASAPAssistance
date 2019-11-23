@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
@@ -33,19 +34,16 @@ public class MainActivity extends AppCompatActivity{
 
         result = findViewById(R.id.result);
 
-        new AsyncClassHelper().execute();
+        new AsyncClassGet().execute();
     }
-    /*
+
     public void onCLicksendSMS(View view) throws IOException {
         Log.i("ASAPAssistance", "Button pressed");
 
-
-        String x = sendSMS(url, connection);
-
-        //result.setText(x);
+        new AsyncClassPost().execute();
 
     }
-
+    /*
     public static String sendSMS(URL url, HttpURLConnection connection) throws IOException {
         String ret;
 
@@ -76,7 +74,8 @@ public class MainActivity extends AppCompatActivity{
 
      */
 
-    private class AsyncClassHelper extends AsyncTask<Void, Void, String> {
+    private class AsyncClassGet extends AsyncTask<Void, Void, String> {
+        String ret;
 
         @Override
         protected String doInBackground(Void... voids) {
@@ -89,9 +88,8 @@ public class MainActivity extends AppCompatActivity{
                 connection.addRequestProperty("Content-Type", "application/json");
                 String encoded = Base64.getEncoder().encodeToString((x).getBytes());  //Java 8
                 connection.setRequestProperty("Authorization", "Basic " + encoded);
-                String ret;
 
-                Log.i("ASAPAssistance", "Send sms function");
+                Log.i("ASAPAssistance", "get sms function");
 
                 try {
                     InputStream in = connection.getInputStream();
@@ -122,5 +120,46 @@ public class MainActivity extends AppCompatActivity{
 
             return null;
         }
-    }   onPost
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            result.setText(ret);
+            Log.i("MainActivity","Is it finished???");
+        }
+    }
+
+    private class AsyncClassPost extends AsyncTask<Void, Void, String> {
+        String ret;
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String x = "AC777c3e32b672b6782bfe4d798a4e6800" + ":" + "5fce2bddc8744fac940b51d893c7a385";
+            try {
+                URL url = new URL(URLstring);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setDoOutput(true);
+                connection.setInstanceFollowRedirects( false );
+                connection.setRequestMethod("POST");
+                connection.setRequestProperty( "Content-Type", "application/x-www-form-urlencoded");
+                connection.setRequestProperty( "charset", "utf-8");
+                connection.setRequestProperty( "Content-Length", "To=6477068738&From=9412004022&Body=This is an SMS sent from Edmund");
+                connection.setUseCaches( false );
+
+                Log.i("ASAPAssistance", "Send sms function");
+
+                connection.disconnect();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (ProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+    }
 }
