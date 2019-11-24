@@ -6,11 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-
     <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="935dp"
-        android:layout_height="846dp"
+        android:id="@+id/imageView"
+        android:layout_width="427dp"
+        android:layout_height="733dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,14 +33,15 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        android:layout_width="298dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068"
+        app:layout_constraintVertical_bias="0.015"
         app:srcCompat="@drawable/asap_assistance" />
 
     <ImageView
@@ -92,16 +92,16 @@
 
     <ImageButton
         android:id="@+id/loginBtn"
-        android:layout_width="111dp"
-        android:layout_height="50dp"
+        android:layout_width="112dp"
+        android:layout_height="46dp"
         android:background="#00FFFFFF"
         android:onClick="onClickLogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toEndOf="@+id/registerBtn"
+        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772"
+        app:layout_constraintVertical_bias="0.766"
         app:srcCompat="@drawable/sign_in" />
 
     <ImageButton
