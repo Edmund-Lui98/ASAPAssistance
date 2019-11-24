@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -19,7 +18,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity{
 
-    ImageButton btnLogin;
     EditText username;
     EditText password;
     FirebaseAuth mAuth;
@@ -31,7 +29,6 @@ public class LoginActivity extends AppCompatActivity{
 
         username = findViewById(R.id.usernameInput);
         password = findViewById(R.id.passwordInput);
-        //btnLogin = findViewById(R.id.loginBtn);
     }
 
     public void onClickLogin(View view) {
