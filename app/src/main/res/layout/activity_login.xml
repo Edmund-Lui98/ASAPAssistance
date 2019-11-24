@@ -6,46 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="408dp"
-        android:layout_height="725dp"
-        app:srcCompat="@drawable/Homepage_Background"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="2dp" />
 
-    <EditText
-        android:id="@+id/usernameInput"
-        android:layout_width="221dp"
-        android:layout_height="46dp"
-        android:gravity="start|center"
-        android:hint="@string/usernameHint"
-        android:inputType="textEmailAddress"
-        android:padding="15dp"
-        android:textColor="#767676"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588" />
-
-    <EditText
-        android:id="@+id/passwordInput"
-        android:layout_width="221dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="12dp"
-        android:gravity="start|center"
-        android:hint="@string/passwordHint"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:textColor="#767676"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameInput"
-        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/registerBtn"
