@@ -18,14 +18,13 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="320dp"
-        android:layout_height="296dp"
+        android:layout_width="293dp"
+        android:layout_height="236dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321"
+        app:layout_constraintVertical_bias="0.272"
         app:srcCompat="@drawable/happy_bot" />
 
     <ImageView
@@ -64,7 +63,7 @@
         app:layout_constraintHorizontal_bias="0.77"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915" />
+        app:layout_constraintVertical_bias="0.939" />
 
     <TextView
         android:id="@+id/textView"
@@ -72,14 +71,14 @@
         android:layout_height="35dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="635dp" />
+        tools:layout_editor_absoluteY="652dp" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="54dp"
         android:layout_height="45dp"
         app:srcCompat="@drawable/speaker_icon"
-        tools:layout_editor_absoluteX="347dp"
-        tools:layout_editor_absoluteY="627dp" />
+        tools:layout_editor_absoluteX="341dp"
+        tools:layout_editor_absoluteY="642dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
