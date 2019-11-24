@@ -7,48 +7,109 @@
     tools:context=".LoginActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="935dp"
+        android:layout_height="846dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.508"
+        app:srcCompat="@drawable/background" />
 
     <ImageButton
         android:id="@+id/registerBtn"
-        android:layout_width="110dp"
-        android:layout_height="38dp"
+        android:layout_width="111dp"
+        android:layout_height="47dp"
         android:background="#00FFFFFF"
-        app:srcCompat="@drawable/Register"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="538dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769"
+        app:srcCompat="@drawable/register" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ASAP_Assistance"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="56dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068"
+        app:srcCompat="@drawable/asap_assistance" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="261dp"
-        android:layout_height="265dp"
-        app:srcCompat="@drawable/Happy_bot"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="102dp" />
+        android:layout_width="274dp"
+        android:layout_height="321dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217"
+        app:srcCompat="@drawable/happy_bot" />
+
+    <EditText
+        android:id="@+id/usernameInput"
+        style="u"
+        android:layout_width="236dp"
+        android:layout_height="49dp"
+        android:gravity="start|center"
+        android:hint="@string/usernameHint"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:textColor="#767676"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.588" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="236dp"
+        android:layout_height="46dp"
+        android:gravity="start|center"
+        android:hint="@string/passwordHint"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="#767676"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.679" />
 
     <ImageButton
         android:id="@+id/loginBtn"
-        android:layout_width="104dp"
-        android:layout_height="43dp"
+        android:layout_width="111dp"
+        android:layout_height="50dp"
         android:background="#00FFFFFF"
-        app:srcCompat="@drawable/Sign_In"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="536dp" />
+        app:srcCompat="@drawable/sign_in"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="565dp" />
 
     <ImageButton
         android:id="@+id/anonymous"
-        android:layout_width="224dp"
-        android:layout_height="39dp"
+        android:layout_width="231dp"
+        android:layout_height="43dp"
         android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/Go_Anonymous"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="590dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846"
+        app:srcCompat="@drawable/go_anonymous" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
