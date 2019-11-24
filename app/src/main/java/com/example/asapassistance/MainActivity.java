@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity implements AIListener{
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
 
-            result.setText(ret);
+//            result.setText(ret);
             Log.i("MainActivity","Message recieved");
         }
     }
