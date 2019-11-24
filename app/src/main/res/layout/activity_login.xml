@@ -12,10 +12,10 @@
         android:layout_height="928dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.503"
+        app:layout_constraintVertical_bias="0.502"
         app:srcCompat="@drawable/homepage_background" />
 
     <ImageView
@@ -79,6 +79,7 @@
         android:layout_width="110dp"
         android:layout_height="38dp"
         android:background="#00FFFFFF"
+        android:onClick="onClickRegister"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
@@ -92,6 +93,7 @@
         android:layout_width="104dp"
         android:layout_height="37dp"
         android:background="#00FFFFFF"
+        android:onClick="onClickLogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.702"
@@ -105,6 +107,7 @@
         android:layout_width="211dp"
         android:layout_height="49dp"
         android:backgroundTint="#00FFFFFF"
+        android:onClick="logInAnonymous"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.472"
