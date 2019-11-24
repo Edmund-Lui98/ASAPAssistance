@@ -30,7 +30,4 @@ dependencies {
     //firebase implementation
     implementation 'com.google.firebase:firebase-auth:19.1.0'
     implementation "com.google.firebase:firebase-database:19.2.0"
-
-
-
 }
