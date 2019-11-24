@@ -6,36 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <EditText
-        android:id="@+id/usernameInput"
-        android:layout_width="221dp"
-        android:layout_height="46dp"
-        android:gravity="start|center"
-        android:hint="@string/usernameHint"
-        android:inputType="textEmailAddress"
-        android:padding="15dp"
-        android:textColor="#767676"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/passwordInput"
-        android:layout_width="221dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="12dp"
-        android:gravity="start|center"
-        android:hint="@string/passwordHint"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:textColor="#767676"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameInput"
-        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/registerBtn"
+        android:layout_width="110dp"
+        android:layout_height="38dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/Register"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="538dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ASAP_Assistance"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="261dp"
+        android:layout_height="265dp"
+        app:srcCompat="@drawable/Happy_bot"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <ImageButton
+        android:id="@+id/loginBtn"
+        android:layout_width="104dp"
+        android:layout_height="43dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/Sign_In"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="536dp" />
+
+    <ImageButton
+        android:id="@+id/anonymous"
+        android:layout_width="224dp"
+        android:layout_height="39dp"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/Go_Anonymous"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="590dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
