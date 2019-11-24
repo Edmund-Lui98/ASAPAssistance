@@ -10,7 +10,6 @@
         android:id="@+id/usernameInput"
         android:layout_width="221dp"
         android:layout_height="46dp"
-        android:layout_marginTop="64dp"
         android:gravity="start|center"
         android:hint="@string/usernameHint"
         android:inputType="textEmailAddress"
@@ -20,24 +19,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="82dp"
-        android:text="@string/desc"
-        android:textColor="#767676"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/passwordInput"
@@ -56,44 +38,12 @@
         app:layout_constraintTop_toBottomOf="@+id/usernameInput"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/forgot"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="69dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:text="@string/forgot"
-        android:textColor="#767676"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
-
     <ImageButton
-        android:id="@+id/loginBtn"
+        android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:onClick="onClickLogin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.719"
-        app:srcCompat="@drawable/arrow_button" />
-
-    <Button
-        android:id="@+id/registerBtn"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:text="@string/sign_up"
-        android:textAllCaps="false"
-        android:textColor="#767676"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+        app:srcCompat="@drawable/Register"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="462dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
