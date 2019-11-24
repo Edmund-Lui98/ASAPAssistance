@@ -1,13 +1,22 @@
 package com.example.asapassistance;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -19,10 +28,13 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity{
 
     TextView result;
+    static String name = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +43,30 @@ public class MainActivity extends AppCompatActivity{
 
         result = findViewById(R.id.result);
 
-        new AsyncClassGet().execute();
+        //new AsyncClassGet().execute();
+
+
+    }
+    Handler handler = new Handler();
+    Runnable runnable;
+    int delay = 3*1000; //Delay for 15 seconds.  One second = 1000 milliseconds.
+
+
+    @Override
+    protected void onResume() {
+        //start handler as activity become visible
+
+        handler.postDelayed( runnable = new Runnable() {
+            public void run() {
+                if (name.equals("")) {
+                    //trigger
+                }
+
+                handler.postDelayed(runnable, delay);
+            }
+        }, delay);
+
+        super.onResume();
     }
 
     public void onClicksendSMS(View view) throws IOException {
@@ -45,6 +80,37 @@ public class MainActivity extends AppCompatActivity{
 
         new AsyncClassCall().execute();
     }
+
+    public void dataExtract() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        (FirebaseDatabase.getInstance().getReference()).child("UserName").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                if (snapshot == null || snapshot.getValue() == null) {
+                    return;
+                }
+                int i = snapshot.getValue().toString().length()-1;
+                String x = snapshot.getValue().toString().substring(i);
+
+                while (!x.equals("=")) {
+                    Log.i("MainActivity",x);
+                    name = x + name;
+                    i -= 1;
+                    x = snapshot.getValue().toString().substring(i,i+1);
+
+                }
+                result.setText(name.substring(0,name.length()-2));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+
 
     private class AsyncClassGet extends AsyncTask<Void, Void, String> {
         String ret;
@@ -99,7 +165,7 @@ public class MainActivity extends AppCompatActivity{
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
 
-            result.setText(ret);
+            //result.setText(ret);
             Log.i("MainActivity","Message recieved");
         }
     }
@@ -167,18 +233,40 @@ public class MainActivity extends AppCompatActivity{
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            dataExtract();
 
-            result.setText(Integer.toString(res));
+            //result.setText(Integer.toString(res));
             Log.i("MainActivity","Message sent!");
         }
     }
     private class AsyncClassCall extends AsyncTask<Void, Void, String> {
+
         String URLstring = "https://api.zang.io/v2/Accounts/AC777c3e32b672b6782bfe4d798a4e6800/Calls.json";
         String ret;
         int res;
         String urlParameters  = "From=+19412004022&To=+16477068738&Url=http://zang.io/ivr/welcome/call";
         byte[] postData       = urlParameters.getBytes( StandardCharsets.UTF_8 );
         int    postDataLength = postData.length;
+
+        public void dataExtract() {
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            String UID = user.getUid();
+            (FirebaseDatabase.getInstance().getReference()).child("users").child(UID).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot snapshot) {
+                    if (snapshot == null || snapshot.getValue() == null) {
+                        return;
+                    }
+                    String name = snapshot.getValue().toString();
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
         @Override
         protected String doInBackground(Void... voids) {
             String x = "AC777c3e32b672b6782bfe4d798a4e6800" + ":" + "5fce2bddc8744fac940b51d893c7a385";
@@ -235,7 +323,7 @@ public class MainActivity extends AppCompatActivity{
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
 
-            result.setText(Integer.toString(res));
+            //result.setText(Integer.toString(res));
             Log.i("MainActivity","Called!");
         }
     }
