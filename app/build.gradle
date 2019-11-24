@@ -18,6 +18,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
 }
 
 dependencies {
@@ -30,4 +42,14 @@ dependencies {
     //firebase implementation
     implementation 'com.google.firebase:firebase-auth:19.1.0'
     implementation "com.google.firebase:firebase-database:19.2.0"
+
+    //komunicate
+    implementation 'io.kommunicate:kommunicateui:1.9.2'
+
+    //dialogflow
+    implementation 'ai.api:sdk:2.0.7@aar'
+    implementation 'ai.api:libai:1.6.12'
+
+    //java v2
+    implementation 'com.google.apis:google-api-services-dialogflow:v2-rev81-1.25.0'
 }
